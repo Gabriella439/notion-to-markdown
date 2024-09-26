@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 789:
+/***/ 711:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -19,12 +19,12 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 };
 var _Client_auth, _Client_logLevel, _Client_logger, _Client_prefixUrl, _Client_timeoutMs, _Client_notionVersion, _Client_fetch, _Client_agent, _Client_userAgent;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const logging_1 = __nccwpck_require__(901);
-const errors_1 = __nccwpck_require__(501);
-const utils_1 = __nccwpck_require__(245);
-const api_endpoints_1 = __nccwpck_require__(659);
-const node_fetch_1 = __nccwpck_require__(515);
-const package_json_1 = __nccwpck_require__(966);
+const logging_1 = __nccwpck_require__(743);
+const errors_1 = __nccwpck_require__(979);
+const utils_1 = __nccwpck_require__(655);
+const api_endpoints_1 = __nccwpck_require__(329);
+const node_fetch_1 = __nccwpck_require__(577);
+const package_json_1 = __nccwpck_require__(585);
 class Client {
     constructor(options) {
         var _a, _b, _c, _d, _e, _f;
@@ -442,7 +442,7 @@ Client.defaultNotionVersion = "2022-06-28";
 
 /***/ }),
 
-/***/ 659:
+/***/ 329:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -657,14 +657,14 @@ exports.oauthToken = {
 
 /***/ }),
 
-/***/ 501:
+/***/ 979:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildRequestError = exports.APIResponseError = exports.UnknownHTTPResponseError = exports.isHTTPResponseError = exports.RequestTimeoutError = exports.isNotionClientError = exports.ClientErrorCode = exports.APIErrorCode = void 0;
-const utils_1 = __nccwpck_require__(245);
+const utils_1 = __nccwpck_require__(655);
 /**
  * Error codes returned in responses from the API.
  */
@@ -867,7 +867,7 @@ function isAPIErrorCode(code) {
 
 /***/ }),
 
-/***/ 545:
+/***/ 847:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -1004,18 +1004,18 @@ exports.isMentionRichTextItemResponse = isMentionRichTextItemResponse;
 
 /***/ }),
 
-/***/ 348:
+/***/ 342:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isFullPageOrDatabase = exports.isFullComment = exports.isFullUser = exports.isFullPage = exports.isFullDatabase = exports.isFullBlock = exports.iteratePaginatedAPI = exports.collectPaginatedAPI = exports.isNotionClientError = exports.RequestTimeoutError = exports.UnknownHTTPResponseError = exports.APIResponseError = exports.ClientErrorCode = exports.APIErrorCode = exports.LogLevel = exports.Client = void 0;
-var Client_1 = __nccwpck_require__(789);
+var Client_1 = __nccwpck_require__(711);
 Object.defineProperty(exports, "Client", ({ enumerable: true, get: function () { return Client_1.default; } }));
-var logging_1 = __nccwpck_require__(901);
+var logging_1 = __nccwpck_require__(743);
 Object.defineProperty(exports, "LogLevel", ({ enumerable: true, get: function () { return logging_1.LogLevel; } }));
-var errors_1 = __nccwpck_require__(501);
+var errors_1 = __nccwpck_require__(979);
 Object.defineProperty(exports, "APIErrorCode", ({ enumerable: true, get: function () { return errors_1.APIErrorCode; } }));
 Object.defineProperty(exports, "ClientErrorCode", ({ enumerable: true, get: function () { return errors_1.ClientErrorCode; } }));
 Object.defineProperty(exports, "APIResponseError", ({ enumerable: true, get: function () { return errors_1.APIResponseError; } }));
@@ -1023,7 +1023,7 @@ Object.defineProperty(exports, "UnknownHTTPResponseError", ({ enumerable: true, 
 Object.defineProperty(exports, "RequestTimeoutError", ({ enumerable: true, get: function () { return errors_1.RequestTimeoutError; } }));
 // Error helpers
 Object.defineProperty(exports, "isNotionClientError", ({ enumerable: true, get: function () { return errors_1.isNotionClientError; } }));
-var helpers_1 = __nccwpck_require__(545);
+var helpers_1 = __nccwpck_require__(847);
 Object.defineProperty(exports, "collectPaginatedAPI", ({ enumerable: true, get: function () { return helpers_1.collectPaginatedAPI; } }));
 Object.defineProperty(exports, "iteratePaginatedAPI", ({ enumerable: true, get: function () { return helpers_1.iteratePaginatedAPI; } }));
 Object.defineProperty(exports, "isFullBlock", ({ enumerable: true, get: function () { return helpers_1.isFullBlock; } }));
@@ -1036,14 +1036,14 @@ Object.defineProperty(exports, "isFullPageOrDatabase", ({ enumerable: true, get:
 
 /***/ }),
 
-/***/ 901:
+/***/ 743:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logLevelSeverity = exports.makeConsoleLogger = exports.LogLevel = void 0;
-const utils_1 = __nccwpck_require__(245);
+const utils_1 = __nccwpck_require__(655);
 var LogLevel;
 (function (LogLevel) {
     LogLevel["DEBUG"] = "debug";
@@ -1079,7 +1079,7 @@ exports.logLevelSeverity = logLevelSeverity;
 
 /***/ }),
 
-/***/ 245:
+/***/ 655:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -1110,7 +1110,7 @@ exports.isObject = isObject;
 
 /***/ }),
 
-/***/ 515:
+/***/ 577:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -1123,7 +1123,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var Stream = _interopDefault(__nccwpck_require__(203));
 var http = _interopDefault(__nccwpck_require__(611));
 var Url = _interopDefault(__nccwpck_require__(16));
-var whatwgUrl = _interopDefault(__nccwpck_require__(504));
+var whatwgUrl = _interopDefault(__nccwpck_require__(686));
 var https = _interopDefault(__nccwpck_require__(692));
 var zlib = _interopDefault(__nccwpck_require__(106));
 
@@ -1276,7 +1276,7 @@ FetchError.prototype.name = 'FetchError';
 
 let convert;
 try {
-	convert = (__nccwpck_require__(186).convert);
+	convert = (__nccwpck_require__(78).convert);
 } catch (e) {}
 
 const INTERNALS = Symbol('Body internals');
@@ -2905,13 +2905,13 @@ exports.AbortError = AbortError;
 
 /***/ }),
 
-/***/ 430:
+/***/ 740:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var repeat = __nccwpck_require__(665)
+var repeat = __nccwpck_require__(471)
 
 module.exports = markdownTable
 
@@ -3162,14 +3162,14 @@ function toAlignment(value) {
 
 /***/ }),
 
-/***/ 576:
+/***/ 666:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /*! node-domexception. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 
 if (!globalThis.DOMException) {
   try {
-    const { MessageChannel } = __nccwpck_require__(548),
+    const { MessageChannel } = __nccwpck_require__(167),
     port = new MessageChannel().port1,
     ab = new ArrayBuffer()
     port.postMessage(ab, [ab, ab])
@@ -3185,7 +3185,7 @@ module.exports = globalThis.DOMException
 
 /***/ }),
 
-/***/ 376:
+/***/ 42:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3205,12 +3205,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-__exportStar(__nccwpck_require__(903), exports);
+__exportStar(__nccwpck_require__(205), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 903:
+/***/ 205:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3240,8 +3240,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.NotionToMarkdown = void 0;
-const md = __importStar(__nccwpck_require__(469));
-const notion_1 = __nccwpck_require__(621);
+const md = __importStar(__nccwpck_require__(935));
+const notion_1 = __nccwpck_require__(759);
 /**
  * Converts a Notion page to Markdown.
  */
@@ -3683,7 +3683,7 @@ exports.NotionToMarkdown = NotionToMarkdown;
 
 /***/ }),
 
-/***/ 469:
+/***/ 935:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3693,8 +3693,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.table = exports.toggle = exports.divider = exports.addTabSpace = exports.image = exports.todo = exports.bullet = exports.callout = exports.quote = exports.heading3 = exports.heading2 = exports.heading1 = exports.equation = exports.codeBlock = exports.link = exports.underline = exports.strikethrough = exports.italic = exports.bold = exports.inlineEquation = exports.inlineCode = void 0;
-const markdown_table_1 = __importDefault(__nccwpck_require__(430));
-const node_fetch_1 = __importDefault(__nccwpck_require__(102));
+const markdown_table_1 = __importDefault(__nccwpck_require__(740));
+const node_fetch_1 = __importDefault(__nccwpck_require__(964));
 const inlineCode = (text) => {
     return `\`${text}\``;
 };
@@ -3828,7 +3828,7 @@ exports.table = table;
 
 /***/ }),
 
-/***/ 621:
+/***/ 759:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3871,7 +3871,7 @@ exports.modifyNumberedListObject = modifyNumberedListObject;
 
 /***/ }),
 
-/***/ 102:
+/***/ 964:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3884,7 +3884,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var Stream = _interopDefault(__nccwpck_require__(203));
 var http = _interopDefault(__nccwpck_require__(611));
 var Url = _interopDefault(__nccwpck_require__(16));
-var whatwgUrl = _interopDefault(__nccwpck_require__(504));
+var whatwgUrl = _interopDefault(__nccwpck_require__(686));
 var https = _interopDefault(__nccwpck_require__(692));
 var zlib = _interopDefault(__nccwpck_require__(106));
 
@@ -4037,7 +4037,7 @@ FetchError.prototype.name = 'FetchError';
 
 let convert;
 try {
-	convert = (__nccwpck_require__(186).convert);
+	convert = (__nccwpck_require__(78).convert);
 } catch (e) {}
 
 const INTERNALS = Symbol('Body internals');
@@ -5666,7 +5666,7 @@ exports.AbortError = AbortError;
 
 /***/ }),
 
-/***/ 665:
+/***/ 471:
 /***/ ((module) => {
 
 "use strict";
@@ -5744,7 +5744,7 @@ function repeat(str, num) {
 
 /***/ }),
 
-/***/ 42:
+/***/ 552:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5945,7 +5945,7 @@ module.exports.PROCESSING_OPTIONS = PROCESSING_OPTIONS;
 
 /***/ }),
 
-/***/ 167:
+/***/ 966:
 /***/ (function(__unused_webpack_module, exports) {
 
 /**
@@ -10688,7 +10688,7 @@ module.exports.PROCESSING_OPTIONS = PROCESSING_OPTIONS;
 
 /***/ }),
 
-/***/ 315:
+/***/ 125:
 /***/ ((module) => {
 
 "use strict";
@@ -10885,12 +10885,12 @@ conversions["RegExp"] = function (V, opts) {
 
 /***/ }),
 
-/***/ 846:
+/***/ 184:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
-const usm = __nccwpck_require__(119);
+const usm = __nccwpck_require__(905);
 
 exports.implementation = class URLImpl {
   constructor(constructorArgs) {
@@ -11093,15 +11093,15 @@ exports.implementation = class URLImpl {
 
 /***/ }),
 
-/***/ 475:
+/***/ 633:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const conversions = __nccwpck_require__(315);
-const utils = __nccwpck_require__(523);
-const Impl = __nccwpck_require__(846);
+const conversions = __nccwpck_require__(125);
+const utils = __nccwpck_require__(857);
+const Impl = __nccwpck_require__(184);
 
 const impl = utils.implSymbol;
 
@@ -11297,32 +11297,32 @@ module.exports = {
 
 /***/ }),
 
-/***/ 504:
+/***/ 686:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-exports.URL = __nccwpck_require__(475)["interface"];
-exports.serializeURL = __nccwpck_require__(119).serializeURL;
-exports.serializeURLOrigin = __nccwpck_require__(119).serializeURLOrigin;
-exports.basicURLParse = __nccwpck_require__(119).basicURLParse;
-exports.setTheUsername = __nccwpck_require__(119).setTheUsername;
-exports.setThePassword = __nccwpck_require__(119).setThePassword;
-exports.serializeHost = __nccwpck_require__(119).serializeHost;
-exports.serializeInteger = __nccwpck_require__(119).serializeInteger;
-exports.parseURL = __nccwpck_require__(119).parseURL;
+exports.URL = __nccwpck_require__(633)["interface"];
+exports.serializeURL = __nccwpck_require__(905).serializeURL;
+exports.serializeURLOrigin = __nccwpck_require__(905).serializeURLOrigin;
+exports.basicURLParse = __nccwpck_require__(905).basicURLParse;
+exports.setTheUsername = __nccwpck_require__(905).setTheUsername;
+exports.setThePassword = __nccwpck_require__(905).setThePassword;
+exports.serializeHost = __nccwpck_require__(905).serializeHost;
+exports.serializeInteger = __nccwpck_require__(905).serializeInteger;
+exports.parseURL = __nccwpck_require__(905).parseURL;
 
 
 /***/ }),
 
-/***/ 119:
+/***/ 905:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 const punycode = __nccwpck_require__(876);
-const tr46 = __nccwpck_require__(42);
+const tr46 = __nccwpck_require__(552);
 
 const specialSchemes = {
   ftp: 21,
@@ -12621,7 +12621,7 @@ module.exports.parseURL = function (input, options) {
 
 /***/ }),
 
-/***/ 523:
+/***/ 857:
 /***/ ((module) => {
 
 "use strict";
@@ -12649,7 +12649,7 @@ module.exports.implForWrapper = function (wrapper) {
 
 /***/ }),
 
-/***/ 186:
+/***/ 78:
 /***/ ((module) => {
 
 module.exports = eval("require")("encoding");
@@ -12729,7 +12729,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 548:
+/***/ 167:
 /***/ ((module) => {
 
 "use strict";
@@ -12745,7 +12745,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 932:
+/***/ 204:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /* c8 ignore start */
@@ -12769,7 +12769,7 @@ if (!globalThis.ReadableStream) {
     }
   } catch (error) {
     // fallback to polyfill implementation
-    Object.assign(globalThis, __nccwpck_require__(167))
+    Object.assign(globalThis, __nccwpck_require__(966))
   }
 }
 
@@ -12803,7 +12803,7 @@ try {
 
 /***/ }),
 
-/***/ 913:
+/***/ 645:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
@@ -12811,7 +12811,7 @@ try {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* unused harmony export File */
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(107);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(327);
 
 
 const _File = class File extends _index_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
@@ -12865,7 +12865,7 @@ const File = _File
 
 /***/ }),
 
-/***/ 21:
+/***/ 802:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
@@ -12887,11 +12887,11 @@ const external_node_fs_namespaceObject = require("node:fs");
 ;// CONCATENATED MODULE: external "node:path"
 const external_node_path_namespaceObject = require("node:path");
 // EXTERNAL MODULE: ./node_modules/node-domexception/index.js
-var node_domexception = __nccwpck_require__(576);
+var node_domexception = __nccwpck_require__(666);
 // EXTERNAL MODULE: ./node_modules/fetch-blob/file.js
-var file = __nccwpck_require__(913);
+var file = __nccwpck_require__(645);
 // EXTERNAL MODULE: ./node_modules/fetch-blob/index.js
-var fetch_blob = __nccwpck_require__(107);
+var fetch_blob = __nccwpck_require__(327);
 ;// CONCATENATED MODULE: ./node_modules/fetch-blob/from.js
 
 
@@ -12997,7 +12997,7 @@ class BlobDataItem {
 
 /***/ }),
 
-/***/ 107:
+/***/ 327:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
@@ -13005,7 +13005,7 @@ class BlobDataItem {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* unused harmony export Blob */
-/* harmony import */ var _streams_cjs__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(932);
+/* harmony import */ var _streams_cjs__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(204);
 /*! fetch-blob. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 
 // TODO (jimmywarting): in the feature use conditional loading with top level await (requires 14.x)
@@ -13260,7 +13260,7 @@ const Blob = _Blob
 
 /***/ }),
 
-/***/ 886:
+/***/ 18:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
@@ -13269,8 +13269,8 @@ const Blob = _Blob
 /* harmony export */   fS: () => (/* binding */ FormData)
 /* harmony export */ });
 /* unused harmony export File */
-/* harmony import */ var fetch_blob__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(107);
-/* harmony import */ var fetch_blob_file_js__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(913);
+/* harmony import */ var fetch_blob__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(327);
+/* harmony import */ var fetch_blob_file_js__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(645);
 /*! formdata-polyfill. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 
 
@@ -13315,7 +13315,7 @@ return new B(c,{type:"multipart/form-data; boundary="+b})}
 
 /***/ }),
 
-/***/ 701:
+/***/ 485:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
@@ -13407,9 +13407,9 @@ function dataUriToBuffer(uri) {
 ;// CONCATENATED MODULE: external "node:util"
 const external_node_util_namespaceObject = require("node:util");
 // EXTERNAL MODULE: ./node_modules/fetch-blob/index.js
-var fetch_blob = __nccwpck_require__(107);
+var fetch_blob = __nccwpck_require__(327);
 // EXTERNAL MODULE: ./node_modules/formdata-polyfill/esm.min.js
-var esm_min = __nccwpck_require__(886);
+var esm_min = __nccwpck_require__(18);
 ;// CONCATENATED MODULE: ./node_modules/node-fetch/src/errors/base.js
 class FetchBaseError extends Error {
 	constructor(message, type) {
@@ -13670,7 +13670,7 @@ class Body {
 			return formData;
 		}
 
-		const {toFormData} = await __nccwpck_require__.e(/* import() */ 409).then(__nccwpck_require__.bind(__nccwpck_require__, 409));
+		const {toFormData} = await __nccwpck_require__.e(/* import() */ 101).then(__nccwpck_require__.bind(__nccwpck_require__, 101));
 		return toFormData(this.body, ct);
 	}
 
@@ -15072,7 +15072,7 @@ class AbortError extends FetchBaseError {
 }
 
 // EXTERNAL MODULE: ./node_modules/fetch-blob/from.js + 2 modules
-var from = __nccwpck_require__(21);
+var from = __nccwpck_require__(802);
 ;// CONCATENATED MODULE: ./node_modules/node-fetch/src/index.js
 /**
  * Index.js
@@ -15488,7 +15488,7 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 
 /***/ }),
 
-/***/ 966:
+/***/ 585:
 /***/ ((module) => {
 
 "use strict";
@@ -15638,9 +15638,9 @@ module.exports = /*#__PURE__*/JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-const { Client } = __nccwpck_require__(348);
-const { NotionToMarkdown } = __nccwpck_require__(376);
-const fetch = __nccwpck_require__(701);
+const { Client } = __nccwpck_require__(342);
+const { NotionToMarkdown } = __nccwpck_require__(42);
+const fetch = __nccwpck_require__(485);
 const fs = (__nccwpck_require__(896).promises);
 
 const notionClient = new Client({ auth: process.env['INPUT_NOTION-TOKEN'] });
