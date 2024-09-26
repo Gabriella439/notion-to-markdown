@@ -1,0 +1,16 @@
+name: 'Notion to Markdown exporter'
+
+description: 'Export a Notion workspace to a set of Markdown files in the current working directory'
+
+inputs:
+  notion-token:
+    description: 'Notion access token'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'download'
+  color: 'white'

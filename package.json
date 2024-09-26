@@ -1,0 +1,13 @@
+{
+  "name": "notion-to-markdown",
+  "version": "1.0.0",
+  "description": "Convert a Notion workspace to Markdown files",
+  "main": "main.js",
+  "author": "Gabriella Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "node-fetch": "^3.3.2",
+    "notion-to-md": "^3.1.1"
+  }
+}
