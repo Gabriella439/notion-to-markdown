@@ -34144,12 +34144,6 @@ const notionToMarkdown = new NotionToMarkdown({ notionClient });
     search = await notionClient.search(arguments);
 
     for (const result of search.results) {
-      if (!("url" in result)) {
-        core.warning(`Result missing 'url' field: ${JSON.stringify(result)}`)
-
-        continue;
-      }
-
       const baseName = result.url.split('/').pop();
 
       const backoffOptions = {
@@ -34160,10 +34154,14 @@ const notionToMarkdown = new NotionToMarkdown({ notionClient });
 
       const mdBlocks = await backOff(() => notionToMarkdown.pageToMarkdown(result.id), backoffOptions);
 
-      const { parent } = notionToMarkdown.toMarkdownString(mdBlocks);
+      try {
+        const { parent } = notionToMarkdown.toMarkdownString(mdBlocks);
 
-      if(typeof parent !== "undefined") {
-        await fs.writeFile(`${baseName}.md`, parent);
+        if(typeof parent !== "undefined") {
+          await fs.writeFile(`${baseName}.md`, parent);
+        }
+      } catch (error) {
+        core.warning(`Conversion to markdown failed for: ${result.url}`);
       }
     }
 

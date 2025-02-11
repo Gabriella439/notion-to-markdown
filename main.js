@@ -27,10 +27,14 @@ const notionToMarkdown = new NotionToMarkdown({ notionClient });
 
       const mdBlocks = await backOff(() => notionToMarkdown.pageToMarkdown(result.id), backoffOptions);
 
-      const { parent } = notionToMarkdown.toMarkdownString(mdBlocks);
+      try {
+        const { parent } = notionToMarkdown.toMarkdownString(mdBlocks);
 
-      if(typeof parent !== "undefined") {
-        await fs.writeFile(`${baseName}.md`, parent);
+        if(typeof parent !== "undefined") {
+          await fs.writeFile(`${baseName}.md`, parent);
+        }
+      } catch (error) {
+        core.warning(`Conversion to markdown failed for: ${result.url}`);
       }
     }
 
