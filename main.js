@@ -17,12 +17,6 @@ const notionToMarkdown = new NotionToMarkdown({ notionClient });
     search = await notionClient.search(arguments);
 
     for (const result of search.results) {
-      if (!("url" in result)) {
-        core.warning(`Result missing 'url' field: ${JSON.stringify(result)}`)
-
-        continue;
-      }
-
       const baseName = result.url.split('/').pop();
 
       const backoffOptions = {
